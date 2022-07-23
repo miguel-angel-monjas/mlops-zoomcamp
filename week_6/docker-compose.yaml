@@ -1,0 +1,7 @@
+services:
+  kinesis:
+    image: localstack/localstack
+    ports:
+      - "${KINESIS_EXPOSED_PORT}:${KINESIS_PORT}"
+    environment:
+      - SERVICES=s3,kinesis
